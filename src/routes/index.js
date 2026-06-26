@@ -4,6 +4,8 @@ import blogRoutes from "./blog.routes.js";
 import sliderRoutes from "./slider.routes.js"
 import contactRoutes from "./contact.routes.js"
 import careerRoutes from "./career.routes.js"
+import authRoutes from "./auth.routes.js"
+
 const router = express.Router();
 
 /*
@@ -39,4 +41,6 @@ router.use("/sliders", sliderRoutes);
 
 router.use("/contact", contactRoutes);
 router.use("/career", careerRoutes);
+
+router.use("/auth", authRoutes);
 export default router;

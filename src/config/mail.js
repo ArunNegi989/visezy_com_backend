@@ -11,9 +11,4 @@ const transporter = nodemailer.createTransport({
     pass: process.env.SMTP_PASSWORD,
   },
 });
-console.log({
-  SMTP_EMAIL: process.env.SMTP_EMAIL,
-  SMTP_PASSWORD:
-    process.env.SMTP_PASSWORD ? "FOUND" : "NOT FOUND",
-});
 export default transporter;
