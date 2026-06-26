@@ -1,21 +1,42 @@
 import express from "express";
 
+import blogRoutes from "./blog.routes.js";
+import sliderRoutes from "./slider.routes.js"
+import contactRoutes from "./contact.routes.js"
+import careerRoutes from "./career.routes.js"
 const router = express.Router();
 
-// Health Check
+/*
+|--------------------------------------------------------------------------
+| Health Check
+|--------------------------------------------------------------------------
+*/
+
 router.get("/", (req, res) => {
   res.status(200).json({
     success: true,
-    message: "API is running successfully 🚀",
+    message: "Visezy API Running 🚀",
   });
 });
 
-// Example Route
-router.get("/test", (req, res) => {
-  res.json({
-    success: true,
-    message: "Test Route Working",
-  });
-});
+/*
+|--------------------------------------------------------------------------
+| Blog Routes
+|--------------------------------------------------------------------------
+*/
 
+router.use("/blogs", blogRoutes);
+
+
+/*
+|--------------------------------------------------------------------------
+| Slider Routes
+|--------------------------------------------------------------------------
+*/
+
+router.use("/sliders", sliderRoutes);
+
+
+router.use("/contact", contactRoutes);
+router.use("/career", careerRoutes);
 export default router;

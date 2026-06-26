@@ -22,10 +22,9 @@ app.use("/uploads", express.static("src/uploads"));
 app.use("/api", routes);
 
 // 404 Route
-app.use("*", (req, res) => {
+app.use((req, res) => {
   res.status(404).json({
-    success: false,
-    message: "Route Not Found",
+    message: "Route not found",
   });
 });
 
