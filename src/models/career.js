@@ -70,4 +70,4 @@ const careerSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Career", careerSchema);
+export default mongoose.models.Career || mongoose.model("Career", careerSchema);

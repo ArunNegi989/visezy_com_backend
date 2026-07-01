@@ -550,3 +550,26 @@ export const deleteBlog = async (req, res) => {
     }
 
 };
+
+// ==========================
+// GET BLOG FILTERS
+// ==========================
+
+export const getBlogFilters = async (req, res) => {
+  try {
+    const categories = await Blog.distinct("category");
+
+    const statuses = await Blog.distinct("status");
+
+    return res.status(200).json({
+      success: true,
+      categories: categories.filter(Boolean),
+      statuses: statuses.filter(Boolean),
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
