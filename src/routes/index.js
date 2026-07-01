@@ -5,6 +5,7 @@ import sliderRoutes from "./slider.routes.js"
 import contactRoutes from "./contact.routes.js"
 import careerRoutes from "./career.routes.js"
 import authRoutes from "./auth.routes.js"
+import dashboardRoutes from "./dashboard.routes.js"
 
 const router = express.Router();
 
@@ -43,4 +44,7 @@ router.use("/contact", contactRoutes);
 router.use("/career", careerRoutes);
 
 router.use("/auth", authRoutes);
+
+router.use("/dashboard", dashboardRoutes);
+
 export default router;
