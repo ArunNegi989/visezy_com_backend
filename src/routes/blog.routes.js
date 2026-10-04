@@ -10,6 +10,7 @@ import {
   updateBlog,
   deleteBlog,
   getBlogById,
+  getBlogFilters,
 } from "../controllers/blog.controller.js";
 
 const router = express.Router();
@@ -19,6 +20,10 @@ const router = express.Router();
 | Blog Routes
 |--------------------------------------------------------------------------
 */
+
+
+//filter blogs
+router.get("/filters", getBlogFilters);
 
 // Create Blog
 router.post(
@@ -58,5 +63,6 @@ router.put(
 
 // Delete Blog
 router.delete("/:id", deleteBlog);
+
 
 export default router;
