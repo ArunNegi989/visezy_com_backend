@@ -1,5 +1,5 @@
 import fs from "fs";
-import Career from "../models/Career.js";
+import Career from "../models/career.js";
 import transporter from "../config/mail.js";
 
 // ======================================================
