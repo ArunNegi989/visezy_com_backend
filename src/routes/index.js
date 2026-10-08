@@ -6,6 +6,7 @@ import contactRoutes from "./contact.routes.js"
 import careerRoutes from "./career.routes.js"
 import authRoutes from "./auth.routes.js"
 import dashboardRoutes from "./dashboard.routes.js"
+import marqueeRoutes from "./marquee.routes.js"
 
 const router = express.Router();
 
@@ -46,5 +47,7 @@ router.use("/career", careerRoutes);
 router.use("/auth", authRoutes);
 
 router.use("/dashboard", dashboardRoutes);
+
+router.use("/marquee", marqueeRoutes);
 
 export default router;
